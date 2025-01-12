@@ -1,6 +1,6 @@
 let productGrid = document.getElementById('product-grid')
 let productsArray = []
-let url = 'https://my-json-server.typicode.com/Noone1315/market/products'
+let url = 'https://my-json-server.typicode.com/Noone1315/market'
 
 
 fetch(url + '/products')
@@ -10,7 +10,7 @@ fetch(url + '/products')
         }
         let products = await response.json();
         productGrid.innerHTML = null // Очищення контейнера
-        product.forEach(p => {
+        products.forEach(p => {
             productsArray.push(p) 
             let pElem = document.createElement('div')
             pElem.classList.add('product')
@@ -24,9 +24,6 @@ fetch(url + '/products')
             `
             productGrid.appendChild(pElem) // Додаємо продукт у DOM
         })
-    })
-    .catch(error => {
-        console.error('Помилка завантаження', error)
     })
 
 
