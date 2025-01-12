@@ -18,7 +18,7 @@ fetch(url + '/products')
                 <p class='product-price'>Ціна: ${p.price} грн</p>
                 <p class='product-description'>${p.description}</p>
                 <a href='#'>Профіль продавця</a>
-                <button>Купити</button>
+                <button onclick="addProductTocard(${p.id})">Купити</button>
             `;
             productGrid.appendChild(pElem); // Додаємо продукт у DOM
         });
@@ -58,11 +58,11 @@ function drawCardProducts() {
     })
     cardProd.innerHTML+=`
         <p>Total price: ${sum} грн. </p>
-        <button onclick=:buyAll()>Buy</button>
+        <button onclick="buyAll()">Buy</button>
     `
 }
 function buyAll() {
     card = []
     cardProd.innerHTML = 'Грошики заплати'
-    localStorage.setItem("card" '[]');
+    localStorage.setItem("card", '[]');
 }
