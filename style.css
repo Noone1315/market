@@ -50,12 +50,12 @@ button{
 }
 #card-product::before{
     content: '';
-    border: transparent solid black;
+    border: transparent solid 16px;
     border-bottom: solid #000 16px;
     position: relative;
     top: -2.7rem;
     left: 15.7rem;
-    z-index: 1;
+    z-index: -1;
 }
 #card-product{
     border: 1px solid black;
