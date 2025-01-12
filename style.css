@@ -82,7 +82,7 @@ button{
     margin: 0.5rem;
 }
 .product{
-    background-color: rgba(red, green, blue, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
     border-radius: 1rem;
     color: #fff;
